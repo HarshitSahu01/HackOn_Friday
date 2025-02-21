@@ -1,5 +1,6 @@
-// pages/index.tsx or app/page.tsx (for App Router)
-import type { NextPage } from 'next';
+// app/page.tsx
+"use client";
+
 import Collapsible from '@/components/Collapsible';
 
 interface Exercise {
@@ -21,7 +22,7 @@ interface Section {
   bonus?: BonusArticle;
 }
 
-const Home: NextPage = () => {
+export default function Home() {
   const courseSections: Section[] = [
     {
       title: "Hello World",
@@ -60,6 +61,4 @@ const Home: NextPage = () => {
       <Collapsible sections={courseSections} />
     </main>
   );
-};
-
-export default Home;
+}
