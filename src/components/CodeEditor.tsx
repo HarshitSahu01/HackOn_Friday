@@ -55,7 +55,7 @@ const CodeEditor: React.FC = () => {
     setIsLoading(true);
     setOutput("");
     try {
-      const response = await fetch(`http://localhost:5000/run/${selectedLanguage}`, {
+      const response = await fetch(`https://repo-2bdf.onrender.com/run/${selectedLanguage}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code }),
