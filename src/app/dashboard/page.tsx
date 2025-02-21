@@ -26,7 +26,7 @@ const Dashboard = () => {
           </Link>
           {user ? (
             <div className="rounded-lg bg-blue-100 px-6 py-4">
-              <p className="font-mono">
+              <p className="font-urbanist">
                 Welcome back,{" "}
                 {userData && userData.username ? userData.username : "User"}! We
                 missed you!
@@ -34,7 +34,7 @@ const Dashboard = () => {
             </div>
           ) : (
             <div className="rounded-lg bg-blue-100 px-6 py-4">
-              <p className="font-mono">Please sign in.</p>
+              <p className="font-urbanist">Please sign in.</p>
             </div>
           )}
         </div>
@@ -62,15 +62,17 @@ const Dashboard = () => {
                   Your coding journey awaits—but first let&apos;s find something
                   to learn.
                 </p>
-                <button className="bg-blue-500 hover:bg-blue-600 text-white font-mono px-4 py-2 rounded-lg">
-                  Get Started
-                </button>
+                <Link href="/learn">
+                  <button className="bg-blue-500 hover:bg-blue-600 text-white font-pixel px-4 py-2 rounded-lg">
+                    Get Started
+                  </button>
+                </Link>
               </div>
             </div>
 
             {/* Explore Section */}
             <div>
-              <h2 className="mb-4 font-mono text-2xl">Explore more</h2>
+              <h2 className="mb-4 font-urbanist text-2xl">Explore more</h2>
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="border border-gray-300 bg-white text-gray-900 rounded shadow">
                   <div className="flex items-start gap-4 p-6">
@@ -144,7 +146,7 @@ const Dashboard = () => {
                   <div className="flex items-center gap-2">
                     <Star className="h-5 w-5 text-yellow-500" />
                     <div>
-                      <div className="font-mono">0</div>
+                      <div className="font-urbanist">0</div>
                       <div className="text-sm text-gray-600">Total XP</div>
                     </div>
                   </div>
@@ -160,20 +162,20 @@ const Dashboard = () => {
                       <Star className="h-4 w-4" />
                     </div>
                     <div>
-                      <div className="font-mono">0</div>
+                      <div className="font-urbanist">0</div>
                       <div className="text-sm text-gray-600">Badges</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
                     <Flame className="h-5 w-5 text-orange-500" />
                     <div>
-                      <div className="font-mono">1</div>
+                      <div className="font-urbanist">1</div>
                       <div className="text-sm text-gray-600">Day streak</div>
                     </div>
                   </div>
                 </div>
 
-                <button className="w-full border border-gray-300 text-gray-900 font-mono hover:bg-gray-200 px-4 py-2 rounded">
+                <button className="w-full border border-gray-300 text-gray-900 font-urbanist hover:bg-gray-200 px-4 py-2 rounded">
                   View profile
                 </button>
               </div>
@@ -186,7 +188,7 @@ const Dashboard = () => {
               </div>
               <div className="space-y-4 p-6">
                 <div className="flex gap-4">
-                  <div className="flex h-14 w-14 flex-col items-center justify-center rounded-lg bg-amber-500 font-mono">
+                  <div className="flex h-14 w-14 flex-col items-center justify-center rounded-lg bg-amber-500 font-urbanist">
                     <div className="text-xs">FEB</div>
                     <div className="text-xl font-bold">5</div>
                   </div>
@@ -202,7 +204,7 @@ const Dashboard = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex h-14 w-14 flex-col items-center justify-center rounded-lg bg-green-500 font-mono">
+                  <div className="flex h-14 w-14 flex-col items-center justify-center rounded-lg bg-green-500 font-urbanist">
                     <div className="text-xs">FEB</div>
                     <div className="text-xl font-bold">27</div>
                   </div>
@@ -216,7 +218,7 @@ const Dashboard = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex h-14 w-14 flex-col items-center justify-center rounded-lg bg-red-500 font-mono">
+                  <div className="flex h-14 w-14 flex-col items-center justify-center rounded-lg bg-red-500 font-urbanist">
                     <div className="text-xs">MAR</div>
                     <div className="text-xl font-bold">5</div>
                   </div>

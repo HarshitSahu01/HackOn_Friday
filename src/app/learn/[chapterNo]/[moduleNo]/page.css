@@ -1,4 +1,4 @@
-/* Global Tailwind classes for markdown content */
+/* Global Tailwind classes for markdown content
 .markdown h1 {
   @apply text-4xl font-extrabold my-4 text-gray-900;
 }
@@ -19,4 +19,46 @@
 }
 .markdown p {
   @apply my-2 text-gray-800;
+} */
+
+/* Global Tailwind classes for markdown content in light mode */
+.markdown {
+  @apply bg-white text-gray-900 p-6 rounded-lg shadow-sm;
+}
+.markdown h1 {
+  @apply text-4xl font-extrabold mt-6 mb-4 border-b pb-2 text-gray-900;
+}
+.markdown h2 {
+  @apply text-3xl font-bold mt-6 mb-4 border-b pb-2 text-gray-800;
+}
+.markdown h3 {
+  @apply text-2xl font-semibold mt-4 mb-3 text-gray-700;
+}
+.markdown h4 {
+  @apply text-xl font-medium mt-4 mb-3 text-gray-600;
+}
+.markdown h5 {
+  @apply text-lg font-medium mt-4 mb-3 text-gray-500;
+}
+.markdown h6 {
+  @apply text-base font-medium mt-4 mb-3 text-gray-400;
+}
+.markdown p {
+  @apply mt-4 mb-4 leading-relaxed text-gray-800;
+}
+.markdown a {
+  @apply text-blue-600 hover:underline;
+}
+.markdown blockquote {
+  @apply border-l-4 border-blue-300 pl-4 italic text-gray-600 my-4;
+}
+.markdown ul,
+.markdown ol {
+  @apply ml-6 my-4 list-disc;
+}
+.markdown code {
+  @apply bg-gray-200 text-red-600 px-1 py-0.5 rounded;
+}
+.markdown pre {
+  @apply bg-gray-200 p-4 rounded overflow-x-auto;
 }
