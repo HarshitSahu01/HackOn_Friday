@@ -2,11 +2,13 @@
 
 import { useState } from 'react';
 import { ChevronUp, ChevronDown } from 'lucide-react';
+import {useRouter} from 'next/navigation';
 
 interface Exercise {
   name: string;
   completed?: boolean;
   xp?: number;
+  url?: string;
 }
 
 interface BonusArticle {
@@ -27,6 +29,7 @@ interface CollapsibleProps {
 }
 
 const Collapsible: React.FC<CollapsibleProps> = ({ sections }) => {
+    const router = useRouter()
   const [openSection, setOpenSection] = useState<number | null>(0);
 
   const toggleSection = (index: number) => {
@@ -40,6 +43,11 @@ const Collapsible: React.FC<CollapsibleProps> = ({ sections }) => {
     }
     return null;
   };
+
+  const loadModule = (url: any) => {
+    if (url) router.push(url);
+    }
+
 
   return (
     <div className="w-full max-w-2xl mx-auto bg-white rounded-lg p-4 shadow-md">
@@ -99,7 +107,7 @@ const Collapsible: React.FC<CollapsibleProps> = ({ sections }) => {
               {section.exercises && (
                 <div className="space-y-4">
                   {section.exercises.map((exercise, idx) => (
-                    <div key={idx} className="flex items-center justify-between">
+                    <div key={idx} className="flex items-center justify-between cursor:pointer" onClick={() => loadModule(exercise.url)}>
                       <div className="flex">
                         <span className="text-gray-500 w-24">Exercise {idx + 1}</span>
                         <span className="text-gray-800">{exercise.name}</span>
